@@ -1,0 +1,164 @@
+
+
+app_name: CC Studio - IT 1对1 精品培训
+
+jumbotrons:
+  - title: IT Assignment讲解
+    subtitle: IT所有课程的Assignment的讲解与建议.
+    image: "images/it-assignment.jpg"
+
+  - title: IT 1对1 技能学习
+    subtitle: <ul><li>iOS/Android app开发</li><li>ASP.NET Core/MVC</li><li>Python, Python Flask</li><li>Java</li><li>Database</li><li>前段技术栈</li></ul>
+    image: "images/it-training.png"
+
+
+  - title: Web系统定制开发
+    subtitle: 前后端完美定制, 满足您各种功能上的需求.
+    image: "images/fvb.jpg"
+
+  - title: App定制开发
+    subtitle: iOS/Android app定制开发, 前后端完美配合, 一站式解决您企业app的各种问题.
+    image: "images/2_account_selection.png"
+
+
+section1: IT技能列表
+section1_subtitle: 当下最火的技术, 业界对人才的需求十分庞大, 选一门你最喜欢的投入进来吧!
+
+classes:
+  - title: ASP.Net Core/MVC
+    subtitle: 我们有资深的.net架构师和工程师, 帮您完成整个系统的设计与开发.
+    image: "images/aspnet-icon.png"
+
+  - title: Python
+    subtitle: Python基础<br>Python Flask详解<br>Python ML Package<br>(Pandas,numpy, scikit-learn)
+    image: "images/python-icon.jpg"
+
+  - title: Java基础与设计模式
+    subtitle: IT应用最广泛的开发语言; 我们不仅仅是介绍语法, 我们是传授思维.
+    image: "images/java-icon.png"
+
+  - title: iOS应用开发 (Swift)
+    subtitle: iOS应用因为有其独有的app store, 可以最大程度的保证开发者的权益, 同时业界对iOS developer的需求也是十分庞大的.
+    image: "images/swift-icon.png"
+
+  - title: Database Management/Modelling Design (MySQL)
+    subtitle: 数据库作为IT中的数据管理应用,有着举足轻重的作用. 数据建模的能力同时也是应用开发和程序设计的基本技能.
+    image: "images/mysql-icon.png"
+
+  - title: 静态页面开发
+    subtitle: HTML/CSS/JavaScript入门培训<br>前端三大框架的敲门砖<br>绚丽的网页版Resume<br>酷炫的页面设计
+    image: "images/html-icon.png"
+
+statistics_title: 丰富的工作与培训经验
+num_sections:
+  - count: 100
+    title: 培训人次
+    suffix: '▲'
+  - count: 10
+    title: 课程数量
+    suffix: '▲'
+  - count: 90
+    title: 好评率
+    suffix: '%▲'
+  - count: 5
+    title: 工作经验
+    suffix: 年
+
+
+
+section2: Pricing
+section2_subtitle: 按时计费, 包教包会, 随时答疑, 学的越快越省钱!
+pricing_plans:
+  - title: Assignment讲解
+    price: 40起
+    comment: 价格会根据Assignment的难度有适当的调整, 请事先咨询呦.
+    item_for_plan:
+      - Assignment要求分析
+      - Solution Design
+      - Coding建议与答疑
+
+  - title: IT技能1v1学习
+    price: 39
+    comment: 真正1v1, 课程长度你说的算! 学的越快越省钱!
+    item_for_plan:
+      - 1v1 面对面授课;效率高
+      - 项目实战; 提高动手能力的同时也在简历上加入重量级开发经验
+      - 业界发展; 指出career path
+      - 开发中常见issue讲解; 丰富的经验带你跨过无数天坑
+
+
+  - title: 大学课程复习
+    price: 39
+    comment: 大学有些课程难度太大听不懂? 这里有深入浅出的讲解, 逼近考试的真题解析. 期末考试不再愁!
+    item_for_plan:
+      - 课程内容串讲
+      - 课程内容在业界的应用
+      - 真题解析
+
+  - title: 其他方面的IT学习
+    price: xx
+    comment: 如果您有其他IT方面的内容需要学习, 也欢迎咨询, 我会帮您找到合适的讲师的.
+    item_for_plan:
+      - 面试技巧
+      - 微信开发(公众号, 小程序)
+
+
+#customer_title: 客户反馈
+#customer_subtitle: 参加我们培训的学生说
+#customer_desc: 学到了很多东西, 比老师讲的详细多了, 而且结合生活中的例子使得知识点更容易理解
+#
+#students:
+#  - image: images/person_1.jpg
+#    feedback: 很好
+#    school: Monash University
+#    major: Master of IT
+#
+#  - image: images/person_2.jpg
+#    feedback: Good
+#    school: Monash University
+#    major: Master of Accounting
+#
+#  - image: images/person_3.jpg
+#    feedback: Execllent !
+#    school: Monash University
+#    major: Master of Business
+#
+#  - image: images/person_2.jpg
+#    feedback: Good
+#    school: Monash University
+#    major: Master of Accounting
+
+
+contact_subtitle: 项目展示
+contact_title: 个人作品展示
+contact_list:
+  - name: CC-Order
+    image: images/cc-order-show.png
+    title: iOS Distributed Order System
+    desc: This iOS application can be used in restaurant for ordering, billing, order notification for chefs, business analysis, product management, membership management and access management. Main features can be found in github link (only screen shot, no code published) and also this <a href="https://youtu.be/iy4HR6iBCHY" target="_blank">youtube</a>
+    default: active
+
+  - name: Fake-Instagram
+    image: images/fake-instgram-show.png
+    title: Fake-Instagram iOS app/Backend Service
+    desc: A fake Instagram backend serivce and application for iOS. All functionalities are developed with an additional one - swipe images between users via bluetooth. Detail description can be found via this <a href="https://youtu.be/xIZUexAuOMY" target="_blank">youtube</a>
+
+  - name: Emall
+    image: images/emall-show.jpg
+    title: Fake-Instagram iOS app/Backend Service
+    desc: A simple online store developed in Python Flask.
+
+partner_title: 联系方式
+partner_desc:
+partners:
+  - name: We Chat
+    image: images/kn-wechat.jpeg
+    link: "#partner_title"
+
+  - name: "Email: hnzz.kn@gmail.com"
+    image: images/email-contact.png
+    link: "mailto:hnzz.kn@gmail.com"
+
+  - name: linkedin
+    image: images/linkedin.jpeg
+    link: https://www.linkedin.com/in/ning-kang-4a58a9aa/

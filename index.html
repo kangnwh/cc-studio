@@ -1,0 +1,353 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>康宁 Eric Kang</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">{{ site.data.info.app_name }}</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="#section1" class="nav-link">{{ site.data.info.section1 }}</a></li>
+	          <li class="nav-item"><a href="#section2" class="nav-link">{{ site.data.info.section2 }}</a></li>
+	          <!--<li class="nav-item"><a href="#customer_title" class="nav-link" >{{ site.data.info.customer_title }}</a></li>-->
+	          <li class="nav-item"><a href="#contact_title" class="nav-link">{{ site.data.info.contact_subtitle }}</a></li>
+	          <li class="nav-item"><a href="#partner_title" class="nav-link">{{ site.data.info.partner_title }}</a></li>
+	          <!-- <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get started</span></a></li> -->
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+
+        {% for item in site.data.info.jumbotrons %}
+         <div class="slider-item" style="background-image: url(images/bg_1.jpg);">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+              <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+                <div class="col-md-5 wrap col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                  <h1 class="mb-4 mt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{ item.title }}</h1>
+                  <p class="mb-4 mb-md-5 sub-p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> {{ item.subtitle }}</p>
+                </div>
+                <div class="col-md-7 ftco-animate">
+                    <img src= "{{item.image}}" class="img-fluid" alt="">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
+    </section>
+
+    <section class="ftco-section services-section bg-light" id="section1">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-4">{{ site.data.info.section1 }}</h2>
+            <p>{{ site.data.info.section1_subtitle }}</p>
+          </div>
+        </div>
+        <div class="row">
+            {% for cls in site.data.info.classes %}
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span><img class="embed-responsive" src="{{ cls.image }}"/></span>
+                        </div>
+                    </div>
+                    <div class="media-body p-2 mt-3">
+                        <h3 class="heading">{{ cls.title}}</h3>
+                        <p>{{ cls.subtitle }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <span class="subheading">{{ site.data.info.statistics_title }}</span>
+          </div>
+        </div>
+    		<div class="row justify-content-center">
+    			<div class="col-md-10">
+		    		<div class="row">
+                        {% for item in site.data.info.num_sections %}
+                          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="block-18 text-center">
+                              <div class="text">
+                                <strong class="number" data-number="{{ item.count }}">0</strong><strong class="number"> {{ item.suffix }}</strong>
+                                  <span>{{ item.title }}</span>
+                              </div>
+                            </div>
+                          </div>
+                        {% endfor %}
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-light" id="section2">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <span class="subheading">{{ site.data.info.section2 }}</span>
+            <h2 class="mb-4">{{ site.data.info.section2_subtitle }}</h2>
+          </div>
+        </div>
+    		<div class="row d-flex">
+                {% for item in site.data.info.pricing_plans %}
+                    <div class="col-lg-3 col-md-6 ftco-animate">
+                      <div class="block-7">
+                        <div class="text-center">
+                            <h2 class="heading">{{ item.desc }} - {{ item.title }}</h2>
+                            <span class="price"><sup>$</sup> <span class="number">{{ item.price }}</span><sub>/小时</sub></span>
+                            <span class="excerpt d-block">{{ item.comment }}</span>
+                            <!--<h3 class="heading-2 mb-3"></h3>-->
+
+                            <ul class="pricing-text mb-4">
+                                {% for p in item.item_for_plan %}
+                                <li><strong>{{ p }}</strong></li>
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                {% endfor %}
+
+	      </div>
+    	</div>
+    </section>
+		
+
+    <!--<section class="ftco-section testimony-section" id="customer_title">-->
+      <!--<div class="container">-->
+        <!--<div class="row justify-content-center mb-5 pb-3">-->
+          <!--<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">-->
+            <!--<span class="subheading">{{ site.data.info.customer_title }}</span>-->
+            <!--<h2 class="mb-4">{{ site.data.info.customer_subtitle }}</h2>-->
+            <!--<p>{{ site.data.info.customer_desc }}</p>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row ftco-animate">-->
+          <!--<div class="col-md-12">-->
+            <!--<div class="carousel-testimony owl-carousel ftco-owl">-->
+                <!--{% for item in site.data.info.students %}-->
+              <!--<div class="item">-->
+                <!--<div class="testimony-wrap p-4 pb-5">-->
+                  <!--<div class="user-img mb-5" style="background-image: url({{ item.image }})">-->
+                    <!--<span class="quote d-flex align-items-center justify-content-center">-->
+                      <!--<i class="icon-quote-left"></i>-->
+                    <!--</span>-->
+                  <!--</div>-->
+                  <!--<div class="text">-->
+                    <!--<p class="mb-5">{{ item.feedback }}</p>-->
+                    <!--<p class="name">{{ item.major }}</p>-->
+                    <!--<span class="position">{{ item.school }}</span>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+                <!--{% endfor %}-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</section>-->
+
+    <section class="ftco-section" id="contact_title">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-5">
+    			<div class="col-md-7 text-center heading-section ftco-animate">
+                    <span class="subheading">{{ site.data.info.contact_subtitle }}</span>
+                    <h2 class="mb-4">{{ site.data.info.contact_title }}</h2>
+                  </div>
+    		</div>
+
+    		<div class="row">
+
+                  <div class="col-md-12 nav-link-wrap mb-5 pb-md-5 pb-sm-1 ftco-animate">
+                    <div class="nav ftco-animate nav-pills justify-content-center text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        {% for item in site.data.info.contact_list %}
+                          <a class="nav-link" id="v-pills-{{ item.name }}-tab" data-toggle="pill" href="#v-pills-{{ item.name }}" role="tab" aria-controls="v-pills-{{ item.name }}" aria-selected="true"> {{ item.name }}</a>
+
+                          <!--<a class="nav-link" id="v-pills-performance-tab" data-toggle="pill" href="#v-pills-performance" role="tab" aria-controls="v-pills-performance" aria-selected="false">Performance</a>-->
+
+                          <!--<a class="nav-link" id="v-pills-effect-tab" data-toggle="pill" href="#v-pills-effect" role="tab" aria-controls="v-pills-effect" aria-selected="false">Effectiveness</a>-->
+                        {% endfor %}
+                    </div>
+                  </div>
+
+
+          <div class="col-md-12 align-items-center ftco-animate">
+            
+            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+                {% for item in site.data.info.contact_list %}
+                  <div class="tab-pane fade  {% if item.default=='active' %} show active {% endif %}" id="v-pills-{{ item.name }}" role="tabpanel" aria-labelledby="v-pills-{{ item.name }}-tab">
+                    <div class="d-md-flex">
+                        <div class="one-forth align-self-center">
+                            <img src="{{ item.image }}" class="img-fluid border" alt="">
+                        </div>
+                        <div class="one-half ml-md-5 align-self-center">
+                            <h2 class="mb-4">{{ item.title }}</h2>
+                            <p>{{ item.desc }}</p>
+                          </div>
+                      </div>
+                  </div>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <!--<section class="ftco-section ftco-partner">-->
+    	<!--<div class="container">-->
+    		<!--<div class="row justify-content-center mb-5 pb-3">-->
+          <!--<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">-->
+            <!--<h2 class="mb-4">Our Clients</h2>-->
+            <!--<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>-->
+          <!--</div>-->
+        <!--</div>-->
+    		<!--<div class="row">-->
+    			<!--<div class="col-sm ftco-animate">-->
+    				<!--<a href="#" class="partner"><img src="images/partner-1.png" class="img-fluid" alt="Colorlib Template"></a>-->
+    			<!--</div>-->
+    			<!--<div class="col-sm ftco-animate">-->
+    				<!--<a href="#" class="partner"><img src="images/partner-2.png" class="img-fluid" alt="Colorlib Template"></a>-->
+    			<!--</div>-->
+    			<!--<div class="col-sm ftco-animate">-->
+    				<!--<a href="#" class="partner"><img src="images/partner-3.png" class="img-fluid" alt="Colorlib Template"></a>-->
+    			<!--</div>-->
+    			<!--<div class="col-sm ftco-animate">-->
+    				<!--<a href="#" class="partner"><img src="images/partner-4.png" class="img-fluid" alt="Colorlib Template"></a>-->
+    			<!--</div>-->
+    			<!--<div class="col-sm ftco-animate">-->
+    				<!--<a href="#" class="partner"><img src="images/partner-5.png" class="img-fluid" alt="Colorlib Template"></a>-->
+    			<!--</div>-->
+    		<!--</div>-->
+    	<!--</div>-->
+    <!--</section>-->
+
+    <section class="ftco-section bg-light" id="partner_title">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2>{{ site.data.info.partner_title }}</h2>
+            <p>{{ site.data.info.partner_desc }}</p>
+          </div>
+        </div>
+        <div class="row">
+            {% for item in site.data.info.partners %}
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="{{ item.link }}" target="_blank" class="block-20" style="background-image: url({{ item.image }});">
+              </a>
+                <h5 class="heading" style="text-align:center;"><a href="{{ item.link }}" target="_blank" >{{ item.name }}</a></h5>
+
+            </div>
+          </div>
+            {% endfor %}
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+
+            <!--{% for item in site.data.info.footers %}-->
+          <!--<div class="col-md">-->
+            <!--<div class="ftco-footer-widget mb-4">-->
+            	<!--<h2 class="ftco-heading-2"> {{ item.title }}</h2>-->
+            	<!--<div class="block-23 mb-3">-->
+	              <!--<ul>-->
+	                <!--<li><span class="icon icon-map-marker"></span><span class="text">{{ item.address }}</span></li>-->
+	                <!--<li><a href="#"><span class="icon icon-phone"></span><span class="text">{{ item.phone }}</span></a></li>-->
+	                <!--<li><a href="#"><span class="icon icon-envelope"></span><span class="text">{{ item.email }}</span></a></li>-->
+	              <!--</ul>-->
+	            <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+            <!--{% endfor %}-->
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright ©<script>document.write(new Date().getFullYear());</script>2018 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <!--<script src="js/bootstrap-datepicker.js"></script>-->
+  <!--<script src="js/jquery.timepicker.min.js"></script>-->
+  <script src="js/scrollax.min.js"></script>
+  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
+  <!--<script src="js/google-map.js"></script>-->
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
